@@ -60,25 +60,25 @@ input, textarea, select {
   border-width: 1px;
   font-size: 16px; }
 
-body.dark {
+html[data-emc-theme="dark"] body {
   background-color: #222;
   color: #fff; }
-  body.dark p, body.dark ol, body.dark ul {
+  html[data-emc-theme="dark"] body p, html[data-emc-theme="dark"] body ol, html[data-emc-theme="dark"] body ul {
     font-weight: 300; }
-  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  html[data-emc-theme="dark"] body h1, html[data-emc-theme="dark"] body h2, html[data-emc-theme="dark"] body h3, html[data-emc-theme="dark"] body h4, html[data-emc-theme="dark"] body h5, html[data-emc-theme="dark"] body h6 {
     font-weight: 500; }
-  body.dark pre {
+  html[data-emc-theme="dark"] body pre {
     background-color: #2f2f2f; }
 
 @media (prefers-color-scheme: dark) {
-  body.auto-dark-mode {
+  html[data-emc-theme="auto"] body {
     background-color: #222;
     color: #fff; }
-    body.auto-dark-mode p, body.auto-dark-mode ol, body.auto-dark-mode ul {
+    html[data-emc-theme="auto"] body p, html[data-emc-theme="auto"] body ol, html[data-emc-theme="auto"] body ul {
       font-weight: 300; }
-    body.auto-dark-mode h1, body.auto-dark-mode h2, body.auto-dark-mode h3, body.auto-dark-mode h4, body.auto-dark-mode h5, body.auto-dark-mode h6 {
+    html[data-emc-theme="auto"] body h1, html[data-emc-theme="auto"] body h2, html[data-emc-theme="auto"] body h3, html[data-emc-theme="auto"] body h4, html[data-emc-theme="auto"] body h5, html[data-emc-theme="auto"] body h6 {
       font-weight: 500; }
-    body.auto-dark-mode pre {
+    html[data-emc-theme="auto"] body pre {
       background-color: #2f2f2f; } }
 
 /*# sourceMappingURL=screen.css.map */
