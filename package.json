@@ -1,6 +1,6 @@
 {
   "name": "extreme-minimal-css",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A minimal css/scss file that can be used as a starting point for any project",
   "main": "index.js",
   "scripts": {
