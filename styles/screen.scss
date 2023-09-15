@@ -2,9 +2,10 @@
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $color-dark: #222 !default;
 $color-light: #fff !default;
-$color-primary: #5169fc !default;
+$color-primary: #485bea !default;
 $font-size-base: 16px !default;
 $max-content-width: 1024px !default;
+$spacer: 1rem !default;
 html {
   box-sizing: border-box;
   font-size: $font-size-base;
@@ -24,8 +25,12 @@ body {
   color: $color-dark;
 }
 
+section {
+  margin-bottom: $spacer * 2;
+}
+
 h1, h2, h3, h4, h5, h6, p, ol, ul, form, table {
-  margin: 0 0 1rem 0;
+  margin: 0 0 $spacer 0;
 
   ul, ol {
     margin-bottom: 0;
@@ -40,10 +45,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+h1 {
+  font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 1rem;
+}
+
 pre {
   padding: 0.75rem 1rem;
   background-color: darken($color-light, 4%);
   border-radius: 0.5rem;
+  margin: 0 0 $spacer * 1.5 0;
 }
 
 img {
@@ -57,17 +76,14 @@ a {
 
 button {
   background-color: $color-primary;
-  color: $color-light;
-  cursor: pointer;
   border-color: $color-primary;
-}
-
-button {
-  padding: 0.5rem 1rem;
+  color: $color-light;
+  font-size: $font-size-base;
+  padding: 0.5rem 2rem;
   border-radius: 0.25rem;
   border-width: 1px;
   border-style: solid;
-  font-size: $font-size-base;
+  cursor: pointer;
 
   &:active {
     background-color: darken($color-primary, 5%);
@@ -75,11 +91,44 @@ button {
   }
 }
 
+.buttons {
+  width: 100%;
+  overflow: hidden;
+  button {
+    float: left;
+  }
+  button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  legend {
+    padding: 0;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
 input, textarea, select {
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border-width: 1px;
   font-size: $font-size-base;
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: none;
+  border: 1px solid $color-dark;
 }
 
 @mixin dark-mode {
@@ -93,6 +142,11 @@ input, textarea, select {
   }
   pre {
     background-color: lighten($color-dark, 5%);
+  }
+  input, textarea, select {
+    background-color: lighten($color-dark, 5%);
+    color: darken($color-light, 5%);
+    border: 1px solid darken($color-light, 50%);
   }
 }
 
